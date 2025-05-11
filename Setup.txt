@@ -1,0 +1,45 @@
+Phishing Email Detector - Setup Instructions
+
+Step 1: Install Python 3.11+ (recommended, not 3.13 if you face issues)
+https://www.python.org/downloads/
+
+Step 2: Create your project folder:
+PhishingEmailDetector/
+├── app.py
+├── train_model.py
+├── phishing_model.pkl
+├── vectorizer.pkl
+├── emails.csv
+├── requirements.txt
+├── templates/
+│   └── index.html
+
+Step 3: Install dependencies
+Open terminal in project folder and run:
+pip install -r requirements.txt
+
+Step 4: Train the model
+Run:
+python train_model.py
+
+This creates:
+- phishing_model.pkl
+- vectorizer.pkl
+
+Step 5: Run the app
+Run:
+python app.py
+
+Then visit:
+http://localhost:5000/
+
+Step 6: Use the web interface
+- Paste any email message.
+- It will show if it’s SPAM or SAFE with prediction confidence.
+- It will also speak the result aloud using pyttsx3.
+
+Voice Output Note:
+If pyttsx3 fails in browser mode (Flask), threading has already been handled in app.py to avoid RuntimeError.
+
+Need Help?
+Contact the developer or revisit requirements.txt and Python version compatibility.

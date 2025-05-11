@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing Email Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 650px;
+      margin: auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .safe {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .spam {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📧 Phishing Email Detector</h1>
+    <form action="/predict" method="POST">
+      <label for="email_text">Enter email content:</label><br>
+      <textarea name="email_text" id="email_text" placeholder="Paste email content here..." required>{{ email_text }}</textarea>
+      <button type="submit">Check Email</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result {% if label == 'SPAM' %}spam{% else %}safe{% endif %}">
+      {{ prediction }}
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
