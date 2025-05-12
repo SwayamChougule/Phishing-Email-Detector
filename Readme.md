@@ -52,15 +52,15 @@ pip install -r requirements.txt
 ```  
 4️⃣ Train the model:  
 ```bash
-python tool/source_code/train_model.py
+python tool/train_model.py
 ```  
 5️⃣ Run the Flask app:  
 ```bash
-python tool/source_code/app.py
+python tool/app.py
 ```  
 
 ## 🎥 Demo  
-Check out the demo video here: [Demo Video](demo/demo_video_link.txt)  
+Check out the demo video here: [Demo Video](https://youtube.com/watch?v=oAjiOcjU680&feature=shared)  
 
 ## 📜 License  
 This project is licensed under the **MIT License**.  
@@ -69,17 +69,9 @@ This project is licensed under the **MIT License**.
 Feel free to contribute! Fork the repository, make changes, and submit a pull request.  
 
 ## 📩 Contact  
-For any queries, reach out at **swayamchougulw826@gmail.com**.  
+For any queries, reach out at **swayamchougule826@gmail.com**.  
 
 ## 👨‍💻 Developed By  
 **Swayam & Siddhant**  
 (Student Project – AI & Security)  
 Presented as a live working project for academic evaluation.  
-```
-
----
-
-### **Next Steps:**  
-✅ Copy this updated content into your `README.md` file.  
-✅ Modify any sections (like your GitHub username, repository name, and email).  
-✅ Let me know once done, and we’ll move forward with **initializing Git and pushing your project to GitHub!** 🚀😊
